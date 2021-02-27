@@ -117,16 +117,20 @@ input{
   transition: all 1s;
 }
 
-form:hover{
+.fixed{
   width: 200px;
   cursor: pointer;
 }
 
-form:hover input{
+.fixedx{
   display: block;
 }
 
 form:hover .fa{
+  background: #ad5389;
+  color: white;
+}
+.fixedy{
   background: #ad5389;
   color: white;
 }

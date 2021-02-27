@@ -1,5 +1,10 @@
 
 var text = document.getElementById('text');
+var userinput = document.getElementById('details');
+var forsearch = document.getElementById('searchbtn');
+var input = document.getElementById('input');
+
+var searchvalue;
 var newDom = '';
 var animationDelay = 6;
 
@@ -16,4 +21,8 @@ for(let i = 0; i < length; i++)
     text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
 }
 
-e4d2c35e8bdb4632eab6874264fd6d10bd81e54a
+forsearch.addEventListener("click", function(){
+    userinput.classList.toggle("fixed");
+    input.classList.toggle("fixedx");
+    forsearch.classList.toggle("fixedy");
+})
