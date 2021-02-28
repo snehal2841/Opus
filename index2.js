@@ -29,7 +29,9 @@ forsearch.addEventListener("click", function(){
     
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
-            console.log(this.responseText);
+            var client = JSON.parse(xhr.responseText);
+            console.log(client.data);
+            generateHTML(client.data);
         }
     });
     if(input.value!==null)
@@ -40,3 +42,29 @@ forsearch.addEventListener("click", function(){
     
     xhr.send(data);
 })
+
+
+function generateHTML(results) {
+    //container.classList.remove("initial");
+    let generatedHTML = "";
+    for(let i=0; i<results.length; i++){
+      generatedHTML += `
+      <div class="card">
+        <div class="image">
+          <img src="${results[i].album.cover}"/>
+        </div>
+        <div class="details">
+          <div class="center">
+            <ul>
+              <li><a href="#"><i class="fas fa-heart"></i></a></li>
+              <li><a href="${results[i].artist.preview}"><i class="fa fa-play"></i></a></li>
+              <li>"${results[i].album.title}</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+      `;
+  };
+  document.getElementById('output').innerHTML = generatedHTML;
+  }
+  
