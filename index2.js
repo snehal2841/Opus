@@ -57,7 +57,7 @@ function generateHTML(results) {
           <div class="center">
             <ul>
               <li><a href="#"><i class="fas fa-heart"></i></a></li>
-              <li><a href="${results[i].artist.preview}"><i class="fa fa-play"></i></a></li>
+              <li><a href="${results[i].artist.preview}"><i class="fas fa-play"></i></a></li>
               <li>"${results[i].album.title}</li>
             </ul>
           </div>
