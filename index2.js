@@ -22,7 +22,21 @@ for(let i = 0; i < length; i++)
 }
 
 forsearch.addEventListener("click", function(){
-    userinput.classList.toggle("fixed");
-    input.classList.toggle("fixedx");
-    forsearch.classList.toggle("fixedy");
+    const data = null;
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+    
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            console.log(this.responseText);
+        }
+    });
+    if(input.value!==null)
+    var fetchreq = "https://deezerdevs-deezer.p.rapidapi.com/search?q="+ input.value;
+    xhr.open("GET", fetchreq);
+    xhr.setRequestHeader("x-rapidapi-key", "6b53c05b24msh8cf9f0c519bf9ccp10324ejsn97e34d83dbe7");
+    xhr.setRequestHeader("x-rapidapi-host", "deezerdevs-deezer.p.rapidapi.com");
+    
+    xhr.send(data);
 })
