@@ -4,7 +4,6 @@
 body{
     background-color: rgba(0, 0, 0,0.8);
     font-family: 'Cormorant Upright', serif;
-    height: 1200px;
 }
 
 /* header */
@@ -22,13 +21,13 @@ background: linear-gradient(to top, #ad5389, #3c1053); /* W3C, IE 10+/ Edge, Fir
 
 
 .custom-shape-divider-top-1614400042 {
-    position: absolute;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
     margin-top: -5px;
+    margin-bottom: 80px;
 }
 
 .custom-shape-divider-top-1614400042 svg {
@@ -163,15 +162,28 @@ form:hover .fa{
 
 /* Card sectioning */
 
+h3{
+  color: white;
+  margin-left: 240px;
+  margin-top: 70px;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
 .card {
-  margin-top: 550px;
-  position: absolute;
+  
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 200px;
   height: 240px;
   background: #000;
+  margin-bottom: 50px;
 }
 .card .image {
   width: 100%;
@@ -283,6 +295,7 @@ hr.style-six {
   margin-bottom: 0;
 }
 /* footer ends */
+
 /* player */
 #app-cover
 {
@@ -293,7 +306,6 @@ hr.style-six {
     height: 100px;
     margin: -4px auto;
 }
-
 
 #player
 {
