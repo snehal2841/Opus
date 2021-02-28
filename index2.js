@@ -47,24 +47,22 @@ forsearch.addEventListener("click", function(){
 function generateHTML(results) {
     //container.classList.remove("initial");
     let generatedHTML = "";
-    for(let i=0; i<results.length; i++){
       generatedHTML += `
       <div class="card">
         <div class="image">
-          <img src="${results[i].album.cover}"/>
+          <img src="${results[1].album.cover}"/>
         </div>
         <div class="details">
           <div class="center">
             <ul>
               <li><a href="#"><i class="fas fa-heart"></i></a></li>
-              <li><a href="${results[i].artist.preview}"><i class="fa fa-play"></i></a></li>
-              <li>"${results[i].album.title}</li>
+              <li><a href="${results[1].artist.preview}"><i class="fa fa-play"></i></a></li>
+              <li>"${results[1].album.title}</li>
             </ul>
           </div>
         </div>
     </div>
       `;
-  };
   document.getElementById('output').innerHTML = generatedHTML;
   }
   

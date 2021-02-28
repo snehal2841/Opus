@@ -4,7 +4,7 @@
 body{
     background-color: rgba(0, 0, 0,0.8);
     font-family: 'Cormorant Upright', serif;
-    height: 2000px;
+    height: 1200px;
 }
 
 /* header */
@@ -79,7 +79,7 @@ form{
   left: 50%;
   transform: translate(-50%,-50%);
   transition: all 0.8s;
-  width: 600px;
+  width: 50%;
   cursor: pointer;
   height: 50px;
   background: white;
